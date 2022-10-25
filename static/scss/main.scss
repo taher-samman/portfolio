@@ -1,0 +1,113 @@
+$red :#ff0f3f;
+$white :white;
+
+html {
+    @import 'frontend';
+    @import 'backend';
+    @import 'default';
+    font-size: 20px;
+
+    .frontend {
+        header {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            padding: .5rem 0;
+            transition: .5s ease;
+
+            .navbar {
+                .navbar-brand {
+                    margin: 0%;
+                    width: 10%;
+
+                    img {
+                        width: 100%;
+                        transition: .5s ease;
+                    }
+                }
+
+                .navbar-nav {
+                    flex-grow: 1;
+                    justify-content: center;
+
+                    .nav-item {
+                        .nav-link {
+                            color: $red;
+                            transition: .5s ease;
+                            position: relative;
+                        }
+
+                        .active {
+                            font-weight: bold;
+
+                            &::before {
+                                content: '';
+                                display: block;
+                                width: 50%;
+                                transition: .5s ease;
+                                height: 50%;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0%;
+                                border: 2px solid $red;
+                                border-top: none;
+                                border-right: none;
+                            }
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 50%;
+                                height: 50%;
+                                position: absolute;
+                                top: 0;
+                                transition: .5s ease;
+                                right: 0%;
+                                border-width: 2px;
+                                border-style: solid;
+                                border-color: $red;
+                                border-left: none;
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .fixed {
+            position: fixed;
+            background-color: $red;
+
+            .navbar {
+                .navbar-brand {
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            color: $white;
+                        }
+
+                        .active {
+
+                            &::before {
+                                border-color: $white;
+                            }
+
+                            &::after {
+                                border-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main {}
+    }
+}

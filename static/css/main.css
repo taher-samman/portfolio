@@ -1,0 +1,85 @@
+html {
+  font-size: 20px;
+}
+html .container,
+html .container-fluid,
+html .navbar,
+html .navbar-brand,
+html .row > * {
+  padding: 0%;
+}
+html .row {
+  margin: 0%;
+}
+html .frontend header {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 0.5rem 0;
+  transition: 0.5s ease;
+}
+html .frontend header .navbar .navbar-brand {
+  margin: 0%;
+  width: 10%;
+}
+html .frontend header .navbar .navbar-brand img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+html .frontend header .navbar .navbar-nav {
+  flex-grow: 1;
+  justify-content: center;
+}
+html .frontend header .navbar .navbar-nav .nav-item .nav-link {
+  color: #ff0f3f;
+  transition: 0.5s ease;
+  position: relative;
+}
+html .frontend header .navbar .navbar-nav .nav-item .active {
+  font-weight: bold;
+}
+html .frontend header .navbar .navbar-nav .nav-item .active::before {
+  content: "";
+  display: block;
+  width: 50%;
+  transition: 0.5s ease;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  border: 2px solid #ff0f3f;
+  border-top: none;
+  border-right: none;
+}
+html .frontend header .navbar .navbar-nav .nav-item .active::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  transition: 0.5s ease;
+  right: 0%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ff0f3f;
+  border-left: none;
+  border-bottom: none;
+}
+html .frontend .fixed {
+  position: fixed;
+  background-color: #ff0f3f;
+}
+html .frontend .fixed .navbar .navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+html .frontend .fixed .navbar .navbar-nav .nav-item .nav-link {
+  color: white;
+}
+html .frontend .fixed .navbar .navbar-nav .nav-item .active::before {
+  border-color: white;
+}
+html .frontend .fixed .navbar .navbar-nav .nav-item .active::after {
+  border-color: white;
+}
